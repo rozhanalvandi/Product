@@ -1,0 +1,9 @@
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.csproj.AssemblyReference.cache
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/rpswa.dswa.cache.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.AssemblyInfoInputs.cache
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.AssemblyInfo.cs
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.csproj.CoreCompileInputs.cache
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.MvcApplicationPartsAssemblyInfo.cs
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.MvcApplicationPartsAssemblyInfo.cache
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.sourcelink.json
