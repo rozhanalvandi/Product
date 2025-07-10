@@ -10,12 +10,12 @@ namespace Product.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Products> products { get; set; }
+        public DbSet<Products> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Product>()
+            modelBuilder.Entity<Products>()
                 .HasIndex(p => new { p.ManufactureEmail, p.ProduceDate })
                 .IsUnique();
         }
