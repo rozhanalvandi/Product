@@ -1,14 +1,16 @@
+using System;
 using FluentValidation;
-using Product.DTOs;
-public class ProductDtoValidator : AbstractValidator<ProductDto>
+using Product.Commands;
+
+namespace Product.Validators
 {
-    public ProductDtoValidator()
+    public class ProductDtoValidator : AbstractValidator<CreateProductCommand>
     {
-        RuleFor(p => p.Name).NotEmpty().WithMessage("Name is required.");
-        RuleFor(p => p.ManufactureEmail)
-            .NotEmpty().WithMessage("Manufacture Email is required.")
-            .EmailAddress().WithMessage("Manufacture Email must be a valid email.");
-        RuleFor(p => p.ManufacturePhone).NotEmpty().WithMessage("Manufacture Phone is required.");
-        RuleFor(p => p.ProduceDate).NotEmpty().WithMessage("Produce Date is required.");
+        public ProductDtoValidator()
+        {
+            RuleFor(x => x.Name).NotEmpty().WithMessage("Name is required.");
+            RuleFor(x => x.ManufactureEmail).NotEmpty().EmailAddress();
+            RuleFor(x => x.ProduceDate).LessThanOrEqualTo(DateTime.Today);
+        }
     }
 }

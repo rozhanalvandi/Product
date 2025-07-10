@@ -2,6 +2,7 @@
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/bin/Debug/net8.0/appsettings.json
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/bin/Debug/net8.0/global.json
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/bin/Debug/net8.0/Models/global.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/bin/Debug/net8.0/Product.staticwebassets.endpoints.json
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/bin/Debug/net8.0/Product
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/bin/Debug/net8.0/Product.deps.json
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/bin/Debug/net8.0/Product.runtimeconfig.json
@@ -127,6 +128,7 @@
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/bin/Debug/net8.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/bin/Debug/net8.0/runtimes/win-x86/native/e_sqlite3.dll
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.csproj.AssemblyReference.cache
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/rpswa.dswa.cache.json
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.GeneratedMSBuildEditorConfig.editorconfig
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.AssemblyInfoInputs.cache
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.AssemblyInfo.cs
@@ -134,14 +136,14 @@
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.MvcApplicationPartsAssemblyInfo.cs
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.MvcApplicationPartsAssemblyInfo.cache
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.sourcelink.json
-/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets.build.json
-/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets.development.json
-/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets/msbuild.Product.Microsoft.AspNetCore.StaticWebAssets.props
-/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets/msbuild.build.Product.props
-/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Product.props
-/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Product.props
-/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets.pack.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/rjimswa.dswa.cache.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/scopedcss/bundle/Product.styles.css
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets.build.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets.build.json.cache
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets.development.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets.build.endpoints.json
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.csproj.Up2Date
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/Product.dll
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/refint/Product.dll
