@@ -148,3 +148,10 @@
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Product.props
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Product.props
 /Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets.pack.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/rpswa.dswa.cache.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/bin/Debug/net8.0/Product.staticwebassets.endpoints.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/rjimswa.dswa.cache.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets.build.json.cache
+/Users/rozhanalvandi/Documents/GitHub/Product/Product/obj/Debug/net8.0/staticwebassets.build.endpoints.json

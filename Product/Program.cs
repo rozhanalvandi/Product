@@ -18,7 +18,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")
-        ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found."))); // Added null coalesce for robustness
+        ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found."))); 
 
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
