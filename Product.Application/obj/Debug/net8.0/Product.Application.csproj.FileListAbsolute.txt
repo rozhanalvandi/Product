@@ -1,0 +1,16 @@
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/bin/Debug/net8.0/Product.Application.deps.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/bin/Debug/net8.0/Product.Application.dll
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/bin/Debug/net8.0/Product.Application.pdb
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/bin/Debug/net8.0/Product.Domain.dll
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/bin/Debug/net8.0/Product.Domain.pdb
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/obj/Debug/net8.0/Product.Application.csproj.AssemblyReference.cache
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/obj/Debug/net8.0/Product.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/obj/Debug/net8.0/Product.Application.AssemblyInfoInputs.cache
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/obj/Debug/net8.0/Product.Application.AssemblyInfo.cs
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/obj/Debug/net8.0/Product.Application.csproj.CoreCompileInputs.cache
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/obj/Debug/net8.0/Product.Application.sourcelink.json
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/obj/Debug/net8.0/Product..7E280BC3.Up2Date
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/obj/Debug/net8.0/Product.Application.dll
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/obj/Debug/net8.0/refint/Product.Application.dll
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/obj/Debug/net8.0/Product.Application.pdb
+/Users/rozhanalvandi/Documents/GitHub/Product/Product.Application/obj/Debug/net8.0/ref/Product.Application.dll

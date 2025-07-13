@@ -3,9 +3,9 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Xunit;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Product.Validators;
-using Product.Models;
-using Product.DTOs;
+using Product.Application.Validators;
+using Product.Domain.Models;
+using Product.Application.DTOs;
 using System.Net.Http.Json;
 namespace Product.Tests.Controllers
 {

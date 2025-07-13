@@ -2,111 +2,78 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Identity; 
-using Product.Data;
-using Product.Models;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 using Microsoft.Data.Sqlite;
+using Product.Infrastructure.Data;
+using Product.Domain.Models;
+using Microsoft.Extensions.Configuration;
 
 namespace Product.Tests
 {
     public class CustomWebApplicationFactory : WebApplicationFactory<Program>
+{
+    private readonly SqliteConnection _connection;
+
+    public CustomWebApplicationFactory()
     {
-        private SqliteConnection? _testConnection; 
+        _connection = new SqliteConnection("DataSource=:memory:");
+        _connection.Open();
+    }
 
-        public CustomWebApplicationFactory()
+    protected override void ConfigureWebHost(IWebHostBuilder builder)
+    {
+        builder.ConfigureServices(services =>
         {
-            if (_testConnection == null) 
+            var descriptor = services.SingleOrDefault(
+                d => d.ServiceType == typeof(DbContextOptions<AppDbContext>));
+            if (descriptor != null)
             {
-                _testConnection = new SqliteConnection($"DataSource=file:{Guid.NewGuid().ToString()}?mode=memory&cache=shared");
-                _testConnection.Open();
+                services.Remove(descriptor);
             }
-        }
 
-        protected override void ConfigureWebHost(IWebHostBuilder builder)
-        {
-            builder.ConfigureServices(services =>
+            services.AddDbContext<AppDbContext>(options =>
             {
-                var dbContextDescriptor = services.SingleOrDefault(
-                    d => d.ServiceType == typeof(DbContextOptions<AppDbContext>));
-                if (dbContextDescriptor != null)
-                {
-                    services.Remove(dbContextDescriptor);
-                }
+                options.UseSqlite(_connection);
+            });
 
-                services.AddDbContext<AppDbContext>(options =>
+            var sp = services.BuildServiceProvider();
+
+            using (var scope = sp.CreateScope())
+            {
+                var scopedServices = scope.ServiceProvider;
+                var db = scopedServices.GetRequiredService<AppDbContext>();
+
+                db.Database.Migrate();
+
+                db.Products.Add(new Products
                 {
-                    options.UseSqlite(_testConnection!);
+                    Name = "Test Product 1",
+                    ManufactureEmail = "test1@example.com",
+                    ProduceDate = DateTime.UtcNow,
+                    IsAvailable = true
+                });
+                db.Products.Add(new Products
+                {
+                    Name = "Test Product 2",
+                    ManufactureEmail = "test2@example.com",
+                    ProduceDate = DateTime.UtcNow,
+                    IsAvailable = false
                 });
 
-                var sp = services.BuildServiceProvider();
-
-                using (var scope = sp.CreateScope())
-                {
-                    var scopedServices = scope.ServiceProvider;
-                    var dbContext = scopedServices.GetRequiredService<AppDbContext>();
-                    var userManager = scopedServices.GetRequiredService<UserManager<IdentityUser>>(); // UserManager is still resolved and used
-
-                    dbContext.Database.EnsureDeleted();
-                    dbContext.Database.EnsureCreated();
-
-                    Task.Run(async () =>
-                    {
-                        IdentityUser testUser = await userManager.FindByNameAsync("testUser");
-                        if (testUser == null)
-                        {
-                            testUser = new IdentityUser { UserName = "testUser", Email = "test@example.com" };
-                            var result = await userManager.CreateAsync(testUser, "TestPassword1!");
-                            if (!result.Succeeded)
-                            {
-                                throw new InvalidOperationException($"Failed to seed test user: {string.Join(", ", result.Errors.Select(e => e.Description))}");
-                            }
-                            Console.WriteLine("Test user 'testUser' created successfully in test DB.");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Test user 'testUser' already exists in test DB.");
-                        }
-
-                        dbContext.Products.AddRange(
-                            new Products
-                            {
-                                Name = "Test Product 1",
-                                ManufactureEmail = "manu1@example.com",
-                                ManufacturePhone = "111-222-3333",
-                                ProduceDate = DateTime.Today.AddDays(-10),
-                                IsAvailable = true,
-                                CreatedBy = testUser.UserName! 
-                            },
-                            new Products
-                            {
-                                Name = "Test Product 2",
-                                ManufactureEmail = "manu2@example.com",
-                                ManufacturePhone = "444-555-6666",
-                                ProduceDate = DateTime.Today.AddDays(-5),
-                                IsAvailable = false,
-                                CreatedBy = "anotherUser"
-                            }
-                        );
-                        await dbContext.SaveChangesAsync();
-                        Console.WriteLine("Test products seeded successfully in test DB.");
-                    }).Wait();
-                }
-            });
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            base.Dispose(disposing);
-            if (disposing)
-            {
-                _testConnection?.Close();
-                _testConnection?.Dispose();
-                _testConnection = null;
+                db.SaveChanges();
             }
+        });
+    }
+
+
+    protected override void Dispose(bool disposing)
+    {
+        base.Dispose(disposing);
+
+        if (disposing)
+        {
+            _connection?.Close();
+            _connection?.Dispose();
         }
     }
+}
 }

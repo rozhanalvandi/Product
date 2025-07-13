@@ -1,7 +1,7 @@
 using Xunit;
 using FluentValidation.TestHelper;
-using Product.Commands;  
-using Product.Validators;
+using Product.Application.Commands;  
+using Product.Application.Validators;
 using System;
 
 namespace Product.Tests.Validators

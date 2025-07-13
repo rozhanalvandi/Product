@@ -1,3 +1,6 @@
 {
-  "Product, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/rozhanalvandi\/Documents\/GitHub\/Product\/Product"
+  "Product.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/rozhanalvandi\/Documents\/GitHub\/Product\/Product.API",
+  "Product.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/rozhanalvandi\/Documents\/GitHub\/Product\/Product.Application",
+  "Product.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/rozhanalvandi\/Documents\/GitHub\/Product\/Product.Domain",
+  "Product.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/rozhanalvandi\/Documents\/GitHub\/Product\/Product.Infrastructure"
 }

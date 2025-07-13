@@ -1,14 +1,15 @@
 using Xunit;
 using Moq;
 using AutoMapper;
-using Product.Models;
-using Product.DTOs; 
-using Product.Data;
+using Product.Domain.Models;
+using Product.Application.DTOs; 
+using Product.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using Product.Commands;
+using Product.Application.Commands;
 using System;
 using System.Threading.Tasks;
-using Product.Handlers;
+using Product.Application.Handlers;
+using Product.Infrastructure.Repository;
 
 namespace Product.Tests.Handlers
 {
@@ -36,7 +37,8 @@ namespace Product.Tests.Handlers
                       IsAvailable = command.IsAvailable
                   });
 
-        var handler = new CreateProductCommandHandler(context, mapperMock.Object);
+        var productRepository = new ProductRepository(context);
+        var handler = new CreateProductCommandHandler(productRepository, mapperMock.Object);
 
         var command = new CreateProductCommand
         {
